@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "outDir": "./.tsbuild/",
-        "module": "ES6",
+        "module": "CommonJS",
         "target": "ES6",
         "lib": [
             "DOM"
