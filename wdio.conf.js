@@ -138,7 +138,8 @@ exports.config = {
         // TypeScript setup
         require: ['ts-node/register'],
         ui: 'bdd',
-        timeout: 60000
+        // timeout: 60000
+        timeout: 600000000
     },
     //
     // =====
