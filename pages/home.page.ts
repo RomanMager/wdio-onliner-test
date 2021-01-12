@@ -13,11 +13,15 @@ class HomePage extends Page {
     }
 
     public visitPage() {
-        super.visitPage('/')
+        super.visitPage('/');
     }
 
     public openLoginModal() {
-        this.loginWindow.click()
+        this.loginWindow.click();
+    }
+
+    public openSearch() {
+
     }
 }
 
