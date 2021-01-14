@@ -136,10 +136,8 @@ exports.config = {
     // See the full list at http://mochajs.org/
     mochaOpts: {
         // TypeScript setup
-        require: ['ts-node/register'],
         ui: 'bdd',
-        // timeout: 60000
-        timeout: 600000000
+        timeout: 60000
     },
     //
     // =====
