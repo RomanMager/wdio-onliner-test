@@ -12,16 +12,34 @@ class HomePage extends Page {
         return this.userBar.$('.auth-bar--top*=Вход');
     }
 
-    public visitPage() {
+    get navigationBar(): Element {
+        return $('ul.b-main-navigation');
+    }
+
+    get catalogPageLink(): Element {
+        return this.navigationBar.$('li*=Каталог');
+    }
+
+    get cart(): Element {
+        return this.userBar.$('#cart-desktop');
+    }
+
+    public visitPage(): void {
         super.visitPage('/');
     }
 
-    public openLoginModal() {
+    public openLoginModal(): void {
         this.loginWindow.click();
     }
 
-    public openSearch() {
+    public openCatalogPage(): void {
+        this.catalogPageLink.waitForDisplayed();
+        this.catalogPageLink.click();
+    }
 
+    public openCartPage(): void {
+        this.cart.waitForDisplayed();
+        this.cart.click();
     }
 }
 
