@@ -37,15 +37,14 @@ class SearchPage {
         browser.switchToFrame(this.searchIframe);
     }
 
-    public verifyResultsContainValidInfo(searchQuery: string) {
+    public verifyResultsContainValidInfo(searchQuery: string): void {
         this.searchIframe.waitForDisplayed();
         browser.switchToFrame(this.searchIframe);
 
         this.searchResultsList.forEach(item => {
-            console.log(item);
             let title = item.$('.product__title a.product__title-link');
 
-            expect(title.getText()).toHaveTextContaining(searchQuery);
+            expect(title.getText().toLowerCase()).toContain(searchQuery.toLowerCase());
         })        
     }
 }
